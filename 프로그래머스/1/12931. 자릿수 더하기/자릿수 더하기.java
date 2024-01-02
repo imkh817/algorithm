@@ -4,12 +4,11 @@ public class Solution {
     public int solution(int n) {
         int answer = 0;
 
-	        String number = n+"";
-	        String arr[] = number.split("");
-	        for(int i=0; i<arr.length; i++) {
-	        	answer+=Integer.parseInt(arr[i]);
-	        }
+        while (n != 0) {
+            answer += n % 10;
+            n /= 10;
+        }
 
-	        return answer;
+        return answer;
     }
 }
